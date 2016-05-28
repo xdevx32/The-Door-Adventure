@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BC5F04A1CF9A5E20098A189 /* SKMultiLineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5F0491CF9A5E20098A189 /* SKMultiLineLabel.swift */; };
 		5BE25DC81CF8C3DA00B16E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE25DC71CF8C3DA00B16E11 /* AppDelegate.swift */; };
-		5BE25DCA1CF8C3DA00B16E11 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5BE25DC91CF8C3DA00B16E11 /* GameScene.sks */; };
+		5BE25DCA1CF8C3DA00B16E11 /* DoorsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5BE25DC91CF8C3DA00B16E11 /* DoorsScene.sks */; };
 		5BE25DCC1CF8C3DA00B16E11 /* DoorsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE25DCB1CF8C3DA00B16E11 /* DoorsScene.swift */; };
 		5BE25DCE1CF8C3DA00B16E11 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE25DCD1CF8C3DA00B16E11 /* GameViewController.swift */; };
 		5BE25DD11CF8C3DA00B16E11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE25DCF1CF8C3DA00B16E11 /* Main.storyboard */; };
@@ -18,9 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BC5F0491CF9A5E20098A189 /* SKMultiLineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMultiLineLabel.swift; sourceTree = "<group>"; };
 		5BE25DC41CF8C3DA00B16E11 /* The Door Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Door Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE25DC71CF8C3DA00B16E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5BE25DC91CF8C3DA00B16E11 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5BE25DC91CF8C3DA00B16E11 /* DoorsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DoorsScene.sks; sourceTree = "<group>"; };
 		5BE25DCB1CF8C3DA00B16E11 /* DoorsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsScene.swift; sourceTree = "<group>"; };
 		5BE25DCD1CF8C3DA00B16E11 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5BE25DD01CF8C3DA00B16E11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,9 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				5BE25DC71CF8C3DA00B16E11 /* AppDelegate.swift */,
-				5BE25DC91CF8C3DA00B16E11 /* GameScene.sks */,
+				5BE25DC91CF8C3DA00B16E11 /* DoorsScene.sks */,
 				5BE25DCB1CF8C3DA00B16E11 /* DoorsScene.swift */,
 				5BE25DFB1CF8DB9B00B16E11 /* Awesome.swift */,
+				5BC5F0491CF9A5E20098A189 /* SKMultiLineLabel.swift */,
 				5BE25DCD1CF8C3DA00B16E11 /* GameViewController.swift */,
 				5BE25DCF1CF8C3DA00B16E11 /* Main.storyboard */,
 				5BE25DD21CF8C3DA00B16E11 /* Assets.xcassets */,
@@ -132,7 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE25DCA1CF8C3DA00B16E11 /* GameScene.sks in Resources */,
+				5BE25DCA1CF8C3DA00B16E11 /* DoorsScene.sks in Resources */,
 				5BE25DD61CF8C3DA00B16E11 /* LaunchScreen.storyboard in Resources */,
 				5BE25DD31CF8C3DA00B16E11 /* Assets.xcassets in Resources */,
 				5BE25DD11CF8C3DA00B16E11 /* Main.storyboard in Resources */,
@@ -150,6 +153,7 @@
 				5BE25DFC1CF8DB9B00B16E11 /* Awesome.swift in Sources */,
 				5BE25DCE1CF8C3DA00B16E11 /* GameViewController.swift in Sources */,
 				5BE25DC81CF8C3DA00B16E11 /* AppDelegate.swift in Sources */,
+				5BC5F04A1CF9A5E20098A189 /* SKMultiLineLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,8 +13,11 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let scene = DoorsScene(fileNamed:"GameScene") {
+        // Ето тук за пръв път задавам стойност 1 на сценариите за да мога
+        // после да ги овеличавам без проблеми
+        defaults.setInteger(1, forKey: "miniScenarios")
+        
+        if let scene = DoorsScene(fileNamed:"DoorsScene") {
             // Configure the view.
             let skView = self.view as! SKView
             skView.showsFPS = true
