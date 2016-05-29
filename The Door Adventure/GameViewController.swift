@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
         // после да ги овеличавам без проблеми
         defaults.setInteger(1, forKey: "miniScenarios")
         
-        if let scene = DoorsScene(fileNamed:"DoorsScene") {
+        if let scene = MenuScene(fileNamed:"MenuScene") {
             // Configure the view.
             let skView = self.view as! SKView
             skView.showsFPS = false

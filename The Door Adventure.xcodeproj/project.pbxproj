@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B10B00F1CFAD0D300B1A3FC /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B00E1CFAD0D300B1A3FC /* MenuScene.swift */; };
+		5B10B0131CFAE0B700B1A3FC /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5B10B0121CFAE0B700B1A3FC /* MenuScene.sks */; };
 		5BE25DC81CF8C3DA00B16E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE25DC71CF8C3DA00B16E11 /* AppDelegate.swift */; };
 		5BE25DCA1CF8C3DA00B16E11 /* DoorsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5BE25DC91CF8C3DA00B16E11 /* DoorsScene.sks */; };
 		5BE25DCC1CF8C3DA00B16E11 /* DoorsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE25DCB1CF8C3DA00B16E11 /* DoorsScene.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		5B10B00D1CFA44BD00B1A3FC /* Visual.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Visual.playground; path = ../../Visual.playground; sourceTree = "<group>"; };
 		5B10B00E1CFAD0D300B1A3FC /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		5B10B0121CFAE0B700B1A3FC /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		5BE25DC41CF8C3DA00B16E11 /* The Door Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Door Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE25DC71CF8C3DA00B16E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE25DC91CF8C3DA00B16E11 /* DoorsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DoorsScene.sks; sourceTree = "<group>"; };
@@ -65,11 +67,12 @@
 			children = (
 				5BE25DC71CF8C3DA00B16E11 /* AppDelegate.swift */,
 				5BE25DC91CF8C3DA00B16E11 /* DoorsScene.sks */,
+				5B10B0121CFAE0B700B1A3FC /* MenuScene.sks */,
 				5BE25DCB1CF8C3DA00B16E11 /* DoorsScene.swift */,
 				5B10B00E1CFAD0D300B1A3FC /* MenuScene.swift */,
 				5BE25DFB1CF8DB9B00B16E11 /* Awesome.swift */,
-				5B10B00D1CFA44BD00B1A3FC /* Visual.playground */,
 				5BE25DCD1CF8C3DA00B16E11 /* GameViewController.swift */,
+				5B10B00D1CFA44BD00B1A3FC /* Visual.playground */,
 				5BE25DCF1CF8C3DA00B16E11 /* Main.storyboard */,
 				5BE25DD21CF8C3DA00B16E11 /* Assets.xcassets */,
 				5BE25DD41CF8C3DA00B16E11 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				5BE25DCA1CF8C3DA00B16E11 /* DoorsScene.sks in Resources */,
 				5BE25DD61CF8C3DA00B16E11 /* LaunchScreen.storyboard in Resources */,
 				5BE25DD31CF8C3DA00B16E11 /* Assets.xcassets in Resources */,
+				5B10B0131CFAE0B700B1A3FC /* MenuScene.sks in Resources */,
 				5BE25DD11CF8C3DA00B16E11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

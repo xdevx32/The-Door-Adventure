@@ -18,6 +18,8 @@ var optionTwoButton: SKNode! = nil
 
 var diamond: SKNode! = nil
 
+var diamondLabel: SKLabelNode! = nil
+
 var downButtonMargin: CGFloat  = 80.0
 
 class Awesome: SKScene {
@@ -69,10 +71,10 @@ class Awesome: SKScene {
             }
         }
     }
-    
+    override init(){
+        super.init()
+    }
     init(size: CGSize,text:[String] ,answers:[String], points: Int) {
-        
-        
         
         super.init(size: size)
        

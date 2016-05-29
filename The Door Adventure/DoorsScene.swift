@@ -60,7 +60,14 @@ class DoorsScene: SKScene {
    */
     
     // causes error in GameViewController
+    override init(size: CGSize){
+        super.init(size: size)
+        print("asdasds")
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Loop over all the touches in this event
@@ -104,12 +111,14 @@ class DoorsScene: SKScene {
         
         doorFive = SKSpriteNode(imageNamed: "openedDoor")
         doorFive.position = CGPoint(x:CGRectGetMidX(self.frame) ,y:CGRectGetMidY(self.frame))
+        doorFive.setScale(1.5)
         doorFive.zPosition = 1
         
         self.addChild(doorFive)
         
         scenarioTypeLabel = SKLabelNode(fontNamed: "AppleSDGothicNeo-UltraLight")
-        scenarioTypeLabel.text = "Сценарий"
+        scenarioTypeLabel.text = "Един (не)обикновен ден"
+        scenarioTypeLabel.fontSize = 25
         scenarioTypeLabel.fontColor = SKColor.blackColor()
         scenarioTypeLabel.position.x = doorFive.position.x
         scenarioTypeLabel.position.y = doorFive.position.y - doorFive.frame.height/2 - 23
