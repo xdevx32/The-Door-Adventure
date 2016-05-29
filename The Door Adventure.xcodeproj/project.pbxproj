@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B10B00D1CFA44BD00B1A3FC /* Visual.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Visual.playground; path = ../../Visual.playground; sourceTree = "<group>"; };
 		5BC5F0491CF9A5E20098A189 /* SKMultiLineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMultiLineLabel.swift; sourceTree = "<group>"; };
 		5BE25DC41CF8C3DA00B16E11 /* The Door Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Door Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE25DC71CF8C3DA00B16E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 				5BE25DC91CF8C3DA00B16E11 /* DoorsScene.sks */,
 				5BE25DCB1CF8C3DA00B16E11 /* DoorsScene.swift */,
 				5BE25DFB1CF8DB9B00B16E11 /* Awesome.swift */,
+				5B10B00D1CFA44BD00B1A3FC /* Visual.playground */,
 				5BC5F0491CF9A5E20098A189 /* SKMultiLineLabel.swift */,
 				5BE25DCD1CF8C3DA00B16E11 /* GameViewController.swift */,
 				5BE25DCF1CF8C3DA00B16E11 /* Main.storyboard */,

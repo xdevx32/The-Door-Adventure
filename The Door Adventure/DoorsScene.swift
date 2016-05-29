@@ -56,7 +56,22 @@ class DoorsScene: SKScene {
             
             if doorFive.containsPoint(location) {
                 print("Door one selected !")
-                let playScene = Awesome(size: self.size, argument: "asd",token: "", points: 0)
+                
+                
+                linesArray = ["Беше 9 часа в събота и дъждът не ",
+                              "спираше да вали. Ти се събуди от",
+                              "чукане на вратата. Странно, не",
+                              "очакваше никого. ",
+                              "",
+                              "",
+                              ""]
+                
+                textForButtons = ["Отвори","Продължи"]
+                
+                
+                
+                let playScene = Awesome(size: self.size, text: linesArray, answers: textForButtons, points: 0)
+
                 playScene.scaleMode = .AspectFill
                 self.view?.presentScene(playScene, transition: fadeColorEffect)
                 

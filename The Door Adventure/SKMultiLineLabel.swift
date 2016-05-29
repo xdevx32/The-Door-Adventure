@@ -5,7 +5,7 @@
 //  Created by Angel Kukushev on 5/28/16.
 //  Copyright © 2016 Angel Kukushev. All rights reserved.
 //
-
+/*
 import SpriteKit
 
 class SKMultilineLabel: SKNode {
@@ -271,4 +271,5 @@ class SKMultilineLabel: SKNode {
         print(fontSize)
     }
 }
+ */
  */
