@@ -26,6 +26,19 @@ var doorEight: SKNode! = nil
 
 var doorNine: SKNode! = nil
 
+var continueTextLabel: SKLabelNode! = nil
+
+var optionOneTextLabel: SKLabelNode! = nil
+
+var optionTwoTextLabel: SKLabelNode! = nil
+
+var labelArray: [SKLabelNode] = [SKLabelNode]()
+
+var linesArray: [String] = [String]()
+
+var textForButtons: [String] = [String]()
+
+
 var fadeColorEffect: SKTransition = SKTransition.fadeWithColor(UIColor.blackColor(), duration: 3)
 
 var moveInEffect: SKTransition = SKTransition.moveInWithDirection(.Up, duration: 1.5)

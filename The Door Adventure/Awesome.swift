@@ -16,23 +16,30 @@ var optionOneButton: SKNode! = nil
 
 var optionTwoButton: SKNode! = nil
 
-var continueTextLabel: SKLabelNode! = nil
-
-var optionOneTextLabel: SKLabelNode! = nil
-
-var optionTwoTextLabel: SKLabelNode! = nil
-
-var labelArray: [SKLabelNode] = [SKLabelNode]()
-
-var linesArray: [String] = [String]()
-
-var textForButtons: [String] = [String]()
-
 var downButtonMargin: CGFloat  = 80.0
 
 class Awesome: SKScene {
     
+    var continueTextLabel: SKLabelNode! = nil
     
+    var optionOneTextLabel: SKLabelNode! = nil
+    
+    var optionTwoTextLabel: SKLabelNode! = nil
+    
+    var labelArray: [SKLabelNode] = [SKLabelNode]()
+    
+    var linesArray: [String] = [String]()
+    
+    var textForButtons: [String] = [String]()
+
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Loop over all the touches in this event
@@ -41,8 +48,11 @@ class Awesome: SKScene {
             let location = touch.locationInNode(self)
             // Check if the location of the touch is within the button's bounds
             if continueButton.containsPoint(location) {
-             
-                self.removeAllChildren()
+                
+            
+        
+                //self.removeAllChildren()
+                
                 
                 let playScene = Awesome(size: self.size, text: linesArray, answers: textForButtons, points: 0)
                 playScene.scaleMode = .AspectFill
@@ -50,6 +60,8 @@ class Awesome: SKScene {
                 
                 defaults.setBool(false, forKey: "toContinue")
                  // boom
+                
+               
             }
         }
     }
