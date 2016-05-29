@@ -64,11 +64,10 @@ class DoorsScene: SKScene {
                               "очакваше никого. ",
                               "",
                               "",
+                              "",
                               ""]
                 
-                textForButtons = ["Отвори","Продължи"]
-                
-                
+                textForButtons = ["","Продължи","Отвори"]
                 
                 let playScene = Awesome(size: self.size, text: linesArray, answers: textForButtons, points: 0)
 

@@ -97,7 +97,7 @@ class Awesome: SKScene {
                           "",
                           ""]
             
-            textForButtons = ["Затвори вратата","Поздрави го"]
+            textForButtons = ["","Затвори вратата","Поздрави го"]
             
         } else if scenariosCount == 3 {
             linesArray = ["Непознатият мина покрай теб,",
@@ -125,7 +125,7 @@ class Awesome: SKScene {
                           "но никога не беше идвал за тях."
                            ]
             
-            textForButtons = ["","Ресторант","Парк"]
+            textForButtons = ["Магазин","Парк","Ресторант"]
             
         }else if scenariosCount == 5 {
             linesArray = ["Непознатият остави картата на масата",
@@ -231,7 +231,7 @@ class Awesome: SKScene {
         // LABEL CODE
         optionOneTextLabel = SKLabelNode(fontNamed: "AppleSDGothicNeo-UltraLight")
         
-        optionOneTextLabel.text = textForButtons[0]
+        optionOneTextLabel.text = textForButtons[1]
 
         optionOneTextLabel.fontSize = 25
         
@@ -254,7 +254,7 @@ class Awesome: SKScene {
         
         optionTwoButton = SKSpriteNode(imageNamed:"rawButton")
         
-        optionTwoButton.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMinY(self.frame) + downButtonMargin + 30.0)
+        optionTwoButton.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMinY(self.frame) + downButtonMargin + 50.0)
         
         
         // END BUTTON CODE
@@ -283,12 +283,12 @@ class Awesome: SKScene {
         
         // ADDING CHILDS
     
-        if "" != textForButtons[0]{
+        if "" != textForButtons[1]{
             addChild(optionOneTextLabel)
             addChild(optionOneButton)
         }
     
-        if "" != textForButtons[1]{
+        if "" != textForButtons[0]{
             addChild(optionTwoTextLabel)
             addChild(optionTwoButton)
             
