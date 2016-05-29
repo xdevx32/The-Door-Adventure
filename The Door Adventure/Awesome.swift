@@ -16,12 +16,16 @@ var optionOneButton: SKNode! = nil
 
 var optionTwoButton: SKNode! = nil
 
+var diamond: SKNode! = nil
+
 var downButtonMargin: CGFloat  = 80.0
 
 class Awesome: SKScene {
     
     var continueTextLabel: SKLabelNode! = nil
     
+    var tapBar: SKShapeNode! = nil
+   
     var optionOneTextLabel: SKLabelNode! = nil
     
     var optionTwoTextLabel: SKLabelNode! = nil
@@ -73,8 +77,42 @@ class Awesome: SKScene {
         super.init(size: size)
        
         let scenariosCount = defaults.integerForKey("miniScenarios")
+        print("Scenario count:" + String(scenariosCount))
         
-        print(scenariosCount)
+        
+        
+        
+        // the tab bar on top
+        tapBar = SKShapeNode(rectOfSize: CGSize(width: self.frame.width, height: 6))
+        tapBar.name = "bar"
+        tapBar.fillColor = SKColor.blackColor()
+        tapBar.zPosition = 1
+        tapBar.position.x = CGRectGetMidX(self.frame)
+        tapBar.position.y = CGRectGetMaxY(self.frame) - 50
+    
+        
+        self.addChild(tapBar)
+        
+        
+        diamond = SKSpriteNode(imageNamed:"diamondRed")
+        
+        diamond.position = CGPoint(x:frame.width - 300.0, y:CGRectGetMaxY(self.frame) - 27)
+        print(frame.width)
+        print(diamond)
+        print(CGRectGetMaxX(self.frame))
+        print(CGRectGetMaxX(self.frame) * 0.87)
+        print(CGRectGetMidX(self.frame))
+        diamond.zPosition = 1
+        
+        diamond.setScale(0.3)
+        
+        self.addChild(diamond)
+        // end tap bar
+        
+        
+        
+        
+        
         // Every line can have 33 letters
   
         
@@ -94,9 +132,11 @@ class Awesome: SKScene {
                           "",
                           "",
                           "",
+                          "",
+                          "",
                           ""]
             
-            textForButtons = ["","Продължи","Отвори"]
+            textForButtons = ["","Никъв шанс","Отвори"]
             
         } else if scenariosCount == 2 {
             linesArray = ["Ти отвори врата и пред теб стоеше",
@@ -106,6 +146,7 @@ class Awesome: SKScene {
                           "Непознатият се усмихна и каза:",
                           "`Здравей, <никнейм> !!` ",
                           "От къде ли знаеше той името ти ?",
+                          "",
                           "",
                           ""]
             
@@ -120,6 +161,7 @@ class Awesome: SKScene {
                           "с химикал и каза: След 30 минути",
                           " трябва да си на едно от тези",
                           " места. Избери мъдро !",
+                          "",
                           ""]
             
             textForButtons = ["","","Продължи"]
@@ -140,43 +182,46 @@ class Awesome: SKScene {
             textForButtons = ["Магазин","Парк","Ресторант"]
             
         }else if scenariosCount == 5 {
-            linesArray = ["Непознатият остави картата на масата",
-                          "и излезе също също толкова неочаквано,",
-                          "",
-                          "очакваше никого. ",
-                          "",
-                          "",
-                          "",
-                          "",
-                          ""]
+            linesArray = ["Облече се набързо и след",
+                          "20 минути беше пред вратата.",
+                          "Отвори, а гледката вътре те",
+                          "озадачи. Нямаше сервитьорки",
+                          "нито готвачи. Чинии с храна",
+                          "преминаваха покрай теб",
+                          "на странни маси, които се",
+                          "предвижваха сами към насядалите",
+                          "клиенти. Срещу теб имаше голям",
+                          "електронен часовник."]
             
-            textForButtons = ["","Отвори","Продължи"]
+            textForButtons = ["","","Продължи"]
             
         }else if scenariosCount == 6 {
-            linesArray = ["Беше 9 часа в събота и дъждът не ",
-                          "спираше да вали. Ти се събуди от",
-                          "чукане на вратата. Странно, не",
-                          "очакваше никого. ",
+            linesArray = ["Един възрастен мъж остави",
+                          "закуската си, стана и се обърна",
+                          " към теб.",
+                          "`А, вие дойдохте все пак <име>.",
+                          "Очаквахме ви.`",
                           "",
-                          "",
-                          "",
+                          "Имам машина на времето",
+                          "Искаш ли да пътуваме",
                           "",
                           ""]
             
-            textForButtons = ["","Отвори","Продължи"]
+            textForButtons = ["","","Пфф арее !"]
             
         }else if scenariosCount == 7 {
-            linesArray = ["Беше 9 часа в събота и дъждът не ",
-                          "спираше да вали. Ти се събуди от",
-                          "чукане на вратата. Странно, не",
-                          "очакваше никого. ",
+            linesArray = ["Край на историята за сега !",
                           "",
+                          "",
+                          "",
+                          "",
+                          "HACK FMI 7 RULES !",
                           "",
                           "",
                           "",
                           ""]
             
-            textForButtons = ["","Отвори","Продължи"]
+            textForButtons = ["","","Играй отново!"]
             
         }
         
@@ -207,13 +252,13 @@ class Awesome: SKScene {
         
         backgroundColor = SKColor.whiteColor()
         
-        var 😱:CGFloat = 30.0
+        var 😱:CGFloat = 60.0
        
         // АМИ ТУКА ВСИЧКО СТАНА АМА НИКАКВА ИДЕЯ КАК. ДАЖЕ ДА СИ КАЖА ЧЕСТНО НЕ ИСКАМ ДА ЗНАМ...
         
         //738.0
         
-        for i in 0...7 {
+        for i in 0...9 {
             😱 = 😱 + 30.0
             
             labelArray.append(SKLabelNode(fontNamed: "AppleSDGothicNeo-UltraLight"))
@@ -225,7 +270,7 @@ class Awesome: SKScene {
             labelArray[i].text = linesArray[i]
 
             labelArray[i].fontColor = SKColor.blackColor()
-            print(labelArray[i])
+          //  print(labelArray[i])
             addChild(labelArray[i])
         }
         
@@ -310,7 +355,7 @@ class Awesome: SKScene {
         
         continueButton = SKSpriteNode(imageNamed:"rawButton")
         continueButton.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMinY(self.frame) + 30)
-        
+        print(CGRectGetMidX(self.frame))
         // LABEL CODE
         continueTextLabel = SKLabelNode(fontNamed: "AppleSDGothicNeo-UltraLight")
         
