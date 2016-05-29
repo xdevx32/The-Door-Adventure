@@ -40,8 +40,8 @@ var linesArray: [String] = [String]()
 
 var textForButtons: [String] = [String]()
 
-
-var fadeColorEffect: SKTransition = SKTransition.fadeWithColor(UIColor.blackColor(), duration: 3)
+// was 3
+var fadeColorEffect: SKTransition = SKTransition.fadeWithColor(UIColor.blackColor(), duration: 0)
 
 var moveInEffect: SKTransition = SKTransition.moveInWithDirection(.Up, duration: 1.5)
 

@@ -95,6 +95,7 @@ class Awesome: SKScene {
         
         self.addChild(tapBar)
         
+        //
         
         diamond = SKSpriteNode(imageNamed:"diamondRed")
         
@@ -107,8 +108,8 @@ class Awesome: SKScene {
         diamond.zPosition = 1
         
         diamond.setScale(0.3)
-        
-        self.addChild(diamond)
+    
+       // self.addChild(diamond)
         // end tap bar
         
         
@@ -138,7 +139,7 @@ class Awesome: SKScene {
                           "",
                           ""]
             
-            textForButtons = ["","Никъв шанс","Отвори"]
+            textForButtons = ["","Сън","Отвори"]
             
         } else if scenariosCount == 2 {
             linesArray = ["Ти отвори врата и пред теб стоеше",
@@ -152,7 +153,7 @@ class Awesome: SKScene {
                           "",
                           ""]
             
-            textForButtons = ["","Затвори вратата","Поздрави го"]
+            textForButtons = ["Купи си бира","Затвори вратата","Поздрави го"]
             
         } else if scenariosCount == 3 {
             linesArray = ["Непознатият мина покрай теб,",
@@ -166,7 +167,7 @@ class Awesome: SKScene {
                           "",
                           ""]
             
-            textForButtons = ["","","Продължи"]
+            textForButtons = ["Хапни сникърс","","Продължи"]
             
         }else if scenariosCount == 4 {
             linesArray = ["Непознатият остави картата на ",
@@ -224,6 +225,29 @@ class Awesome: SKScene {
                           ""]
             
             textForButtons = ["","","Играй отново!"]
+            
+            
+            diamond = SKSpriteNode(imageNamed:"diamondRed")
+            
+            diamond.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+            print(frame.width)
+            print(diamond)
+            print(CGRectGetMaxX(self.frame))
+            print(CGRectGetMaxX(self.frame) * 0.87)
+            print(CGRectGetMidX(self.frame))
+            diamond.zPosition = 1
+            
+            diamond.setScale(3)
+            
+            
+            diamond.setScale(0.3)
+            
+           var moveDiamond = SKAction.moveTo(CGPoint(x:frame.width - 300.0, y:CGRectGetMaxY(self.frame) - 27),duration: 4.0)
+            
+            
+            self.addChild(diamond)
+            
+            diamond.runAction(moveDiamond)
             
         }
         
