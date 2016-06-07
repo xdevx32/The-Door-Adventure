@@ -27,7 +27,7 @@ var fadeColorEffect: SKTransition = SKTransition.fadeWithColor(UIColor.blackColo
 
 var moveInEffect: SKTransition = SKTransition.moveInWithDirection(.Up, duration: 1.5)
 */
-
+var nameInput: UITextField?
 
 
 class MenuScene: SKScene {
@@ -80,7 +80,8 @@ class MenuScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         
-        self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = SKColor.init(red:0.91, green:0.89, blue:0.84, alpha:1.0)
+
         
       
         title = SKLabelNode(fontNamed: "AppleSDGothicNeo-UltraLight")
@@ -92,6 +93,13 @@ class MenuScene: SKScene {
         title.zPosition = 1
         
         self.addChild(title)
+        
+        
+        //Name input
+
+        //nameInput=UITextField(frame:CGRect(x:20, y:20, width: 200, height: 40))
+        //self.view!.addSubview(nameInput!)
+        //nameInput?.backgroundColor=UIColor.whiteColor()
         
         
         // play button

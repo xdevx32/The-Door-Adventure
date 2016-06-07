@@ -40,8 +40,7 @@ var linesArray: [String] = [String]()
 
 var textForButtons: [String] = [String]()
 
-// was 3
-var fadeColorEffect: SKTransition = SKTransition.fadeWithColor(UIColor.blackColor(), duration: 0)
+var fadeColorEffect: SKTransition = SKTransition.fadeWithColor(UIColor.blackColor(), duration: 3)
 
 var moveInEffect: SKTransition = SKTransition.moveInWithDirection(.Up, duration: 1.5)
 
@@ -107,7 +106,8 @@ class DoorsScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         
-        self.backgroundColor = UIColor.whiteColor()
+        //self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = SKColor.init(red:0.91, green:0.89, blue:0.84, alpha:1.0)
         
         doorFive = SKSpriteNode(imageNamed: "openedDoor")
         doorFive.position = CGPoint(x:CGRectGetMidX(self.frame) ,y:CGRectGetMidY(self.frame))
