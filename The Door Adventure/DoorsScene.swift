@@ -41,9 +41,9 @@ var linesArray: [String] = [String]()
 var textForButtons: [String] = [String]()
 
 // was 3
-var fadeColorEffect: SKTransition = SKTransition.fadeWithColor(UIColor.blackColor(), duration: 0)
+var fadeColorEffect: SKTransition = SKTransition.fadeWithColor(UIColor.blackColor(), duration: 3)
 
-var moveInEffect: SKTransition = SKTransition.moveInWithDirection(.Up, duration: 1.5)
+//var moveInEffect: SKTransition = SKTransition.moveInWithDirection(.Up, duration: 1.5)
 
 class DoorsScene: SKScene {
     /*

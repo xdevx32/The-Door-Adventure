@@ -55,10 +55,10 @@ class Awesome: SKScene {
             // Check if the location of the touch is within the button's bounds
             if continueButton.containsPoint(location) {
                 
-            
+                let scenariosCount = defaults.doubleForKey("miniScenarios")
+                defaults.setDouble(scenariosCount + 1.0, forKey: "miniScenarios")
         
                 //self.removeAllChildren()
-                
                 
                 let playScene = Awesome(size: self.size, text: linesArray, answers: textForButtons, points: 0)
                 playScene.scaleMode = .AspectFill
@@ -66,8 +66,44 @@ class Awesome: SKScene {
                 
                 defaults.setBool(false, forKey: "toContinue")
                  // boom
-                
+
                
+            }
+            
+            if optionOneButton.containsPoint(location) {
+                
+                let scenariosCount = defaults.doubleForKey("miniScenarios")
+                defaults.setDouble(scenariosCount + 0.1, forKey: "miniScenarios")
+                
+                //self.removeAllChildren()
+                
+                
+                let playScene = Awesome(size: self.size, text: linesArray, answers: textForButtons, points: 0)
+                playScene.scaleMode = .AspectFill
+                self.view?.presentScene(playScene, transition: fadeColorEffect)
+                
+                defaults.setBool(false, forKey: "toOptionOne")
+                // boom
+            
+                
+            }
+            
+            if optionTwoButton.containsPoint(location) {
+                
+                let scenariosCount = defaults.doubleForKey("miniScenarios")
+                defaults.setDouble(scenariosCount + 0.2, forKey: "miniScenarios")
+                
+                //self.removeAllChildren()
+                
+                
+                let playScene = Awesome(size: self.size, text: linesArray, answers: textForButtons, points: 0)
+                playScene.scaleMode = .AspectFill
+                self.view?.presentScene(playScene, transition: fadeColorEffect)
+                
+                defaults.setBool(false, forKey: "toOptionTwo")
+                // boom
+              
+                
             }
         }
     }
@@ -77,8 +113,9 @@ class Awesome: SKScene {
     init(size: CGSize,text:[String] ,answers:[String], points: Int) {
         
         super.init(size: size)
-       
-        let scenariosCount = defaults.integerForKey("miniScenarios")
+        
+        let scenariosCount = defaults.doubleForKey("miniScenarios")
+
         print("Scenario count:" + String(scenariosCount))
         
         
@@ -109,7 +146,7 @@ class Awesome: SKScene {
         
         diamond.setScale(0.3)
     
-       // self.addChild(diamond)
+        self.addChild(diamond)
         // end tap bar
         
         
@@ -118,163 +155,197 @@ class Awesome: SKScene {
         
         // Every line can have 33 letters
   
+    
         
         
         
         
-        
-        
-        
-        
-        if scenariosCount == 1 {
+        if scenariosCount == 1.0 {
             
             linesArray = ["Беше 9 часа в събота и дъждът не ",
                           "спираше да вали. Ти се събуди от",
                           "чукане на вратата. Странно, не",
                           "очакваше никого. ",
+                          "Ще му отвориш ли вратата или",
+                          "ще продължиш да спиш?",
                           "",
+                          "",
+                          "",
+                          ""]
+            
+            textForButtons = ["","Сън!","Отвори"]
+            
+          //  defaults.setDouble(scenariosCount + 1.0, forKey: "miniScenarios")
+            
+        } else if scenariosCount == 1.1 {
+            linesArray = ["Сънят е хубаво нещо ,а ти продъ-",
+                          "лжи да спиш сладко сладко. ",
+                          "На другият ден ти се събуди в",
+                          "9:30 А.М. Имаше писмо пред ",
+                          "вратата.",
                           "",
                           "",
                           "",
                           "",
                           ""]
             
-            textForButtons = ["","Сън","Отвори"]
+            textForButtons = ["","","Прочети го."]
             
-        } else if scenariosCount == 2 {
-            linesArray = ["Ти отвори врата и пред теб стоеше",
+
+            
+        } else if scenariosCount == 2.1 {
+            linesArray = ["'Никнейм' , дядо ти пише.",
+                          "Как си? Много време мина. ",
+                          "Обади ми се по Скайп, искам",
+                          "да те чуя, видя. От както ",
+                          "замина за Франция все избяг-",
+                          "ваш да разговаряш с близките",
+                          "си. Мъчно ни е, дано си добре",
+                          "и да намериш време да се ",
+                          "свържеш с мен.",
+                          "Дядо Спас."]
+            
+            textForButtons = ["","Направи си кафе","Влез в Скайп"]
+            
+            
+            
+        } else if scenariosCount == 3.1 {
+            linesArray = ["Ти взе добро решение.",
+                          "Дядо ти те чакаше в Скайп.",
+                          "Ти му позвъня и той отговори.",
+                          "-Здравей, 'Никнейм' !",
+                          " Каза и си отдъхна Дядо Спас",
+                          "-Здравей Дядо ! Как си ?",
+                          "Му отговори ти.",
+                          "-Имам изненада за теб !",
+                          "каза каза Дядо Спас и ",
+                          "показа една стара монета."]
+            
+            textForButtons = ["","","Продължи"]
+            
+            
+            
+        }else if scenariosCount == 4.1 {
+            // I can do that
+         //   defaults.setDouble(scenariosCount + 0.9, forKey: "miniScenarios")
+            linesArray = ["Разговора продължи нормално",
+                          "и приятно за двама ви !",
+                          "Дядо Спас разправяше истории",
+                          "от едно време и отдръпваше",
+                          "полека-лека от лулата си.",
+                          "На края си обещахте да се",
+                          "видите за да си получиш",
+                          "подаръка от него.",
+                          "Ти спечели червен рубин !",
+                          ""]
+            
+            textForButtons = ["","","Продължи"]
+            rubyReward()
+            
+            
+        }   else if scenariosCount == 2.0 {
+            linesArray = ["Ти отвори вратата и пред теб стоеше",
                           "напълно непознат човек. Нямаше ",
                           "чадър, наблизо нямаше и спряна ",
                           "кола, а той не беше мокър. ",
                           "Непознатият се усмихна и каза:",
-                          "`Здравей, <никнейм> !!` ",
-                          "От къде ли знаеше той името ти ?",
+                          "'Здравей, Мишо !' ",
+                          "От къде ли знаеше той името ти?",
                           "",
                           "",
                           ""]
             
             textForButtons = ["Купи си бира","Затвори вратата","Поздрави го"]
             
-        } else if scenariosCount == 3 {
+     //       defaults.setDouble(scenariosCount + 1.0, forKey: "miniScenarios")
+            
+        } else if scenariosCount == 3.0 {
             linesArray = ["Непознатият мина покрай теб,",
                           "влезе и седна на дивана абсолютно",
-                          "непоканен. `Нямаше много време`",
-                          " каза той и извади подробна ",
-                          "карта на града.Огради три места ",
+                          "непоканен. 'Нямаме много време'",
+                          "каза той и извади подробна ",
+                          "карта на града. Огради три места ",
                           "с химикал и каза: След 30 минути",
                           " трябва да си на едно от тези",
                           " места. Избери мъдро !",
                           "",
                           ""]
             
-            textForButtons = ["Хапни сникърс","","Продължи"]
+            textForButtons = ["","","Продължи"]
             
-        }else if scenariosCount == 4 {
+       //     defaults.setDouble(scenariosCount + 1.0, forKey: "miniScenarios")
+            
+        }else if scenariosCount == 4.0 {
             linesArray = ["Непознатият остави картата на ",
-                          "масата и излезе също също ",
-                          "толкова неочаквано, колкото ",
-                          "беше влязъл. Ти нямаше нищо ",
+                          "масата и излезе също толкова",
+                          "неочаквано, колкото беше",
+                          "влязъл. Ти нямаше нищо ",
                           "по-добро за правене днес, затова",
                           "не се замисли много и избра ",
-                          "едно от местата.А те бяха: ",
-                          "ресторант,магазин за играчки и ",
+                          "едно от местата. А те бяха: ",
+                          "ресторант, магазин за играчки и",
                           "парк. И трите се намираха наблизо,",
-                          "но никога не беше идвал за тях."
-                           ]
+                          "но ти никога не бе чувал за тях."
+            ]
             
             textForButtons = ["Магазин","Парк","Ресторант"]
             
-        }else if scenariosCount == 5 {
+       //     defaults.setDouble(scenariosCount + 1.0, forKey: "miniScenarios")
+            
+        }else if scenariosCount == 5.0 {
             linesArray = ["Облече се набързо и след",
                           "20 минути беше пред вратата.",
                           "Отвори, а гледката вътре те",
-                          "озадачи. Нямаше сервитьорки",
+                          "озадачи. Нямаше сервитьори",
                           "нито готвачи. Чинии с храна",
                           "преминаваха покрай теб",
                           "на странни маси, които се",
-                          "предвижваха сами към насядалите",
-                          "клиенти. Срещу теб имаше голям",
-                          "електронен часовник."]
-            
-            textForButtons = ["","","Продължи"]
-            
-        }else if scenariosCount == 6 {
-            linesArray = ["Един възрастен мъж остави",
-                          "закуската си, стана и се обърна",
-                          " към теб.",
-                          "`А, вие дойдохте все пак <име>.",
-                          "Очаквахме ви.`",
-                          "",
-                          "Имам машина на времето",
-                          "Искаш ли да пътуваме",
-                          "",
+                          "придвижваха сами към насядалите",
+                          "клиенти. ",
                           ""]
             
-            textForButtons = ["","","Пфф арее !"]
+            textForButtons = ["","Тръгни си бързо","Продължи"]
             
-        }else if scenariosCount == 7 {
-            linesArray = ["Край на историята за сега !",
+        //    defaults.setDouble(scenariosCount + 1.0, forKey: "miniScenarios")
+            
+        }else if scenariosCount == 5.1{
+            linesArray = ["В стаята която живееш има",
+                          "кафе машина. Ти отиде и си",
+                          "пусна едно капучино за добро",
+                          "утро, пусна телевизора, а там",
+                          "даваха сучен сериал.",
+                          "Дързост и красота сезон",
+                          "400 , епизод 3214.",
+                          "Рич Форестър ще има дете от",
+                          "Ребека.",
+                          ""]
+            
+            textForButtons = ["","","Край!"]
+            
+        //    defaults.setDouble(scenariosCount + 1.0, forKey: "miniScenarios")
+            
+        }else if scenariosCount == 7.0 {
+            linesArray = ["",
+                          "Ти отключи:",
                           "",
+                          "Пътуване във времето",
                           "",
                           "",
                           "",
                           "HACK FMI 7 RULES !",
                           "",
-                          "",
-                          "",
                           ""]
+            
             
             textForButtons = ["","","Играй отново!"]
             
             
-            diamond = SKSpriteNode(imageNamed:"diamondRed")
-            
-            diamond.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
-            print(frame.width)
-            print(diamond)
-            print(CGRectGetMaxX(self.frame))
-            print(CGRectGetMaxX(self.frame) * 0.87)
-            print(CGRectGetMidX(self.frame))
-            diamond.zPosition = 1
-            
-            diamond.setScale(3)
-            
-            
-            diamond.setScale(0.3)
-            
-           var moveDiamond = SKAction.moveTo(CGPoint(x:frame.width - 300.0, y:CGRectGetMaxY(self.frame) - 27),duration: 4.0)
-            
-            
-            self.addChild(diamond)
-            
-            diamond.runAction(moveDiamond)
-            
+           rubyReward()
         }
         
+    
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        defaults.setInteger(scenariosCount + 1, forKey: "miniScenarios")
+        //defaults.setDouble(scenariosCount + 1.0, forKey: "miniScenarios")
         
         backgroundColor = SKColor.whiteColor()
         
@@ -282,6 +353,7 @@ class Awesome: SKScene {
        
         // АМИ ТУКА ВСИЧКО СТАНА АМА НИКАКВА ИДЕЯ КАК. ДАЖЕ ДА СИ КАЖА ЧЕСТНО НЕ ИСКАМ ДА ЗНАМ...
         
+        // УМЕН СЪМ БИЛ СЕТИЛ СЪМ СЕ
         //738.0
         
         for i in 0...9 {
@@ -404,7 +476,27 @@ class Awesome: SKScene {
 
         // end continue button
     }
-    
+    func rubyReward(){
+        
+        diamond = SKSpriteNode(imageNamed:"diamondRed")
+        
+        diamond.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+        
+        diamond.zPosition = 1
+        
+        diamond.setScale(3)
+        
+        
+        diamond.setScale(0.3)
+        
+        let moveDiamond = SKAction.moveTo(CGPoint(x:frame.width - 300.0, y:CGRectGetMaxY(self.frame) - 27),duration: 4.0)
+        //  let transformDiamond = SKAction.rotateToAngle(<#T##radians: CGFloat##CGFloat#>, duration: <#T##NSTimeInterval#>, shortestUnitArc: <#T##Bool#>)
+        
+        self.addChild(diamond)
+        
+        diamond.runAction(moveDiamond)
+
+    }
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

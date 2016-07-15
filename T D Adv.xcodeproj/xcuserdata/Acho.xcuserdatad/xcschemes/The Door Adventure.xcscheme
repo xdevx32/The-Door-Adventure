@@ -17,7 +17,7 @@
                BlueprintIdentifier = "5BE25DC31CF8C3D900B16E11"
                BuildableName = "The Door Adventure.app"
                BlueprintName = "The Door Adventure"
-               ReferencedContainer = "container:The Door Adventure.xcodeproj">
+               ReferencedContainer = "container:T D Adv.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "5BE25DC31CF8C3D900B16E11"
             BuildableName = "The Door Adventure.app"
             BlueprintName = "The Door Adventure"
-            ReferencedContainer = "container:The Door Adventure.xcodeproj">
+            ReferencedContainer = "container:T D Adv.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "5BE25DC31CF8C3D900B16E11"
             BuildableName = "The Door Adventure.app"
             BlueprintName = "The Door Adventure"
-            ReferencedContainer = "container:The Door Adventure.xcodeproj">
+            ReferencedContainer = "container:T D Adv.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "5BE25DC31CF8C3D900B16E11"
             BuildableName = "The Door Adventure.app"
             BlueprintName = "The Door Adventure"
-            ReferencedContainer = "container:The Door Adventure.xcodeproj">
+            ReferencedContainer = "container:T D Adv.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
