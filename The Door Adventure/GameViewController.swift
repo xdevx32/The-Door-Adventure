@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Ето тук за пръв път задавам стойност 1 на сценариите за да мога
-        // после да ги овеличавам без проблеми
+        // после да ги увеличавам без проблеми
         defaults.setInteger(1, forKey: "miniScenarios")
         
         if let scene = MenuScene(fileNamed:"MenuScene") {
